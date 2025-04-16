@@ -39,7 +39,7 @@ const Footer = () => {
               Mongolian Nuclear Professional Association
             </p>
           </div>
-          <div className="grid grid-cols- sm:grid-cols-3 gap-10 sm:gap-5 text-start">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 sm:gap-5 text-start">
             {navigations.map((nav, i) => (
               <Link
                 key={`footer nav ${i}`}

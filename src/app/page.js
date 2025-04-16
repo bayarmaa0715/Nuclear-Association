@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="flex flex-col gap-10 py-5 md:gap-20 md:py-20">
       <HeroSection />
-      <TopicsSlider />
-      <Member />
       <FeaturedPosts />
+      <Member />
+      <TopicsSlider />
     </div>
   );
 }

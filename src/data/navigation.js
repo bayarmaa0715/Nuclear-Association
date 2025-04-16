@@ -64,8 +64,8 @@ const navigations = [
 
   {
     key: "7",
-    label: "Цахим орчин",
-    href: "social",
+    label: "Медиа",
+    href: "media",
   },
 ];
 export default navigations;

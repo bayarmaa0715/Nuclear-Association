@@ -150,7 +150,7 @@ const PostsSection = () => {
             </div>
 
             {/* Last Comments */}
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            {/* <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="text-2xl font-bold mb-8 relative">
                 <span className="text-carolina-blue after:block after:w-24 after:h-1 after:bg-carolina-blue after:mt-2">
                   Last Comment
@@ -183,7 +183,7 @@ const PostsSection = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

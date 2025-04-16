@@ -45,16 +45,13 @@ export default function TopicsSlider() {
     setIndex((prev) => (prev === topics.length - 1 ? 0 : prev + 1));
 
   return (
-    <section
-      className="py-16  text-black bord flex justify-center "
-      id="topics"
-    >
-      <div className="container mx-auto px-4 border-2 rounded-lg border-[#dae3ff] ">
-        <div className=" p-6 rounded-lg md:flex">
+    <section className="px-4">
+      <div className="container mx-auto md:px-4 border-2 rounded-lg border-[#dae3ff] ">
+        <div className="p-6 rounded-lg md:flex">
           <div className="flex items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Танин мэдэхүй</h2>
-              <p className="text-gray-400 mb-6">
+              <h2 className="mb-4 text-3xl font-bold">Танин мэдэхүй</h2>
+              <p className="mb-6 text-gray-400">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
                 nostrum.
               </p>
@@ -74,17 +71,17 @@ export default function TopicsSlider() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden relative mt-6 ">
+          <div className="relative mt-6 overflow-hidden ">
             <ul
               style={{ transform: `translateX(-${index * 100}%)` }}
-              className="flex md:gap-5 transition-transform duration-500  md:overflow-x-scroll md:scrollbar-hide no-scrollbar"
+              className="flex transition-transform duration-500 md:gap-5 md:overflow-x-scroll md:scrollbar-hide no-scrollbar"
             >
               {topics.map((topic, i) => (
                 <li
                   key={i}
                   className="w-full flex-shrink-0 md:w-[307px] md:flex-grow md:flex md:flex-col group"
                 >
-                  <a href="#" className="block relative">
+                  <a href="#" className="relative block">
                     <div className="relative w-[307px] h-[418px]  rounded-lg overflow-hidden">
                       <Image
                         src={topic.src}
