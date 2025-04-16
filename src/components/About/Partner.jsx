@@ -11,7 +11,7 @@ export const Partner = () => (
         >
           <img
             src={`/images/img${n}.jpeg`}
-            fill
+            layout="fill"
             alt={`Партнер ${n}`}
             className="object-cover w-auto h-20 transition-all duration-300 grayscale hover:grayscale-0"
           />

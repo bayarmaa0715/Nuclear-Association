@@ -1,29 +1,12 @@
 "use client";
+import { Carousel } from "antd";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+// Image sources for the carousel
 const images = ["/images/img1.jpeg", "/images/img2.jpeg", "/images/img3.jpeg"];
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
   return (
     <section className="relative overflow-hidden">
       <div className="container grid items-center gap-2 px-4 mx-auto md:gap-12 lg:grid-cols-2">
@@ -43,36 +26,41 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] lg:h-full z-0 rounded-lg">
+        <Carousel autoplay className="custom-carousel">
           {images.map((src, index) => (
-            <Image
+            <div
               key={index}
-              src={src}
-              fill
-              alt={`Image ${index + 1}`}
-              className={`absolute object-cover transition-all duration-500 ease-in-out rounded-lg ${
-                index === currentIndex
-                  ? "opacity-100 cursor-pointer pointer-events-auto"
-                  : "opacity-0"
-              }`}
-            />
+              className="relative w-full aspect-[4/3] sm:aspect-[3/2] lg:h-full z-0 rounded-lg "
+            >
+              <Image
+                src={src}
+                fill={true}
+                alt={`Image ${index + 1}`}
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
           ))}
-          <div className="absolute left-0 right-0 z-10 flex justify-between top-1/2">
-            <button
-              onClick={handlePrev}
-              className="p-2 text-white bg-gray-300 rounded-full bg-garay-500"
-            >
-              &#8592;
-            </button>
-            <button
-              onClick={handleNext}
-              className="p-2 text-white bg-blue-500 bg-opacity-50 rounded-full"
-            >
-              &#8594;
-            </button>
-          </div>
-        </div>
+        </Carousel>
       </div>
+      <style jsx global>{`
+        .ant-carousel .slick-dots li {
+          width: 16px;
+          height: 16px;
+          margin: 0 6px;
+        }
+
+        .ant-carousel .slick-dots li button {
+          width: 100%;
+          height: 100%;
+          border-radius: 9999px;
+          background: #d1d5db; /* Tailwind-ийн gray-300 */
+          transition: background 0.3s ease;
+        }
+
+        .ant-carousel .slick-dots li.slick-active button {
+          background: #1677ff; /* Active dot өнгө - Ant Design primary */
+        }
+      `}</style>
     </section>
   );
 };

@@ -8,13 +8,15 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const renderMenuItems = (children) => {
-    return children.map((child) => (
-      <li key={child.key} className="px-4 py-2 hover:text-[#334EAC]">
+    return children.map((child, index) => (
+      <li
+        key={`${child.key || child.label}-${index}`}
+        className="px-4 py-2 hover:text-[#334EAC]"
+      >
         <Link href={child.href || "#"}>{child.label}</Link>
       </li>
     ));
   };
-
   return (
     <nav className="relative z-50 shadow-lg">
       <div className="container flex items-center justify-between p-4 mx-auto">
