@@ -1,13 +1,23 @@
-import React from "react";
+import { Associotion } from "@/components/About/Association";
+import { Goal } from "@/components/About/Goal";
+import { Intro } from "@/components/About/Intro";
+import { Partner } from "@/components/About/Partner";
 
 const About = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        Бидний тухай
-        <p>TTБ танилцуулага</p>
-        <p>Гишүүд</p>
-      </div>
+    <div className="h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory ">
+      <section id="goal" className="snap-start">
+        <Goal />
+      </section>
+      <section id="intro" className="snap-start">
+        <Intro />
+      </section>
+      <section id="associotion" className="snap-start">
+        <Associotion />
+      </section>
+      <section id="partner" className="snap-start">
+        <Partner />
+      </section>
     </div>
   );
 };

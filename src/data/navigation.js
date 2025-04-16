@@ -9,10 +9,10 @@ const navigations = [
     label: "Бидний тухай",
     href: "/about",
     children: [
-      { key: "11", label: "Зорилго" },
-      { key: "12", label: "Холбооны танилцуулга" },
-      { key: "13", label: "Салбар холбоод" },
-      { key: "14", label: "Харилцагч байгууллага" },
+      { key: "11", label: "Зорилго", href: "/about#goal" },
+      { key: "12", label: "Холбооны танилцуулга", href: "/about#intro" },
+      { key: "13", label: "Салбар холбоод", href: "/about#association" },
+      { key: "14", label: "Харилцагч байгууллага", href: "/about#partner" },
     ],
   },
   {
