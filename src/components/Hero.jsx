@@ -43,7 +43,7 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] lg:h-full rounded-lg">
+        <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] lg:h-full z-0 rounded-lg">
           {images.map((src, index) => (
             <Image
               key={index}

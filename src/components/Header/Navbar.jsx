@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-lg">
+    <nav className="relative z-50 shadow-lg">
       <div className="container flex items-center justify-between p-4 mx-auto">
         <Link
           href="/"
