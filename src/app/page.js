@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <FeaturedPosts />
       <Member />
-      <TopicsSlider />
+      {/* <TopicsSlider /> */}
     </div>
   );
 }
