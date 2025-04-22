@@ -1,5 +1,5 @@
 export const Associotion = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20 text-center bg-slate-50">
+  <div className="flex flex-col items-center justify-center min-h-screen px-4 py-20 text-center ">
     <h2 className="mb-6 text-4xl font-bold text-prussian-blue">
       Салбар холбоод
     </h2>
