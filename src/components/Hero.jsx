@@ -11,41 +11,40 @@ export const images = [
   "/images/img5.jpg",
 ];
 export const carouselDotStyle = `
-  .ant-carousel .slick-dots li {
-    width: 16px;
-    height: 16px;
-    margin: 0 6px;
-  }
-
   .ant-carousel .slick-dots li button {
-    width: 100%;
-    height: 100%;
-    border-radius: 9999px;
-    background: #d1d5db;
-    transition: background 0.3s ease;
+    background-color: #dae3ff !important;
   }
-
   .ant-carousel .slick-dots li.slick-active button {
-    background: #1677ff;
+    background-color: #334EAC !important;
+  }
+  @media (max-width: 768px) {
+    .ant-carousel .slick-dots {
+      bottom: 20px !important;
+    }
   }
 `;
+
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      <div className="container grid items-center gap-2 px-4 mx-auto md:gap-12 lg:grid-cols-2">
+      <div className="container grid items-center grid-cols-1 gap-2 px-4 mx-auto md:gap-12 lg:grid-cols-2">
         <div className="relative z-10">
           <p className="mb-3 text-xs font-bold tracking-wider sm:text-sm md:text-base ">
             Сайн байна уу?
           </p>
-          <h1 className="mb-5 text-2xl font-extrabold leading-tight md:text-5xl lg:text-6xl ">
+          <h1 className="mb-12 text-3xl font-bold text-center md:text-start text-prussian-blue">
             Монголын Цөмийн Мэргэжлийн Холбоо
           </h1>
-          <p className="max-w-md mb-6 text-xs sm:max-w-lg sm:text-sm md:text-lg text-wild-blue-yonder">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum modi
-            delectus minus culpa reprehenderit? Accusamus eveniet corrupti
-            deserunt repudiandae in, numquam optio eum exercitationem voluptates
-            praesentium rem? Consequatur nostrum laudantium dolores cumque autem
-            nam commodi ullam rem error mollitia! Earum?
+          <p className="text-base text-justify md:text-lg text-slate-700 ">
+            “Цөмийн Шинжлэх Ухаан, Технологи, Инновацын Холбоо” ТББ нь Монгол
+            Улсын хууль тогтоомжийн хүрээнд үйл ажиллагаа явуулдаг, цөмийн
+            салбарын мэргэжлийн төрийн бус байгууллага юм. Тус Холбоо нь цөмийн
+            технологийн аюулгүй, үр ашигтай хөгжлийг дэмжих, салбарын
+            мэргэжилтнүүдийн чадавхийг бэхжүүлэх, олон нийтийн мэдлэг ойлголтыг
+            нэмэгдүүлэхэд чиглэсэн үйл ажиллагааг тэргүүлэх зорилготой. Холбоо
+            нь Цөмийн энерги ба цөмийн аж үйлдвэрийн олон улсын ахмадын холбооны
+            гишүүн бөгөөд олон улсын түвшинд салбарын хамтын ажиллагааг
+            хөгжүүлэхэд идэвхтэй оролцож байна
           </p>
         </div>
 

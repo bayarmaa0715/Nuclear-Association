@@ -23,3 +23,7 @@ body {
   -ms-overflow-style: none; /* Hides scrollbar for Internet Explorer & Edge */
   scrollbar-width: none; /* Hides scrollbar for Firefox */
 }
+
+.custom-carousel .slick-slide {
+  height: auto !important;
+}

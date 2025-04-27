@@ -1,31 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { posts } from "./Posts";
 
 const FeaturedPosts = () => {
-  const posts = [
-    {
-      id: 1,
-      category: ["Travel", "Lifestyle"],
-      readTime: "3 mins",
-      author: "Joseph",
-      date: "25 Nov 2022",
-    },
-    {
-      id: 2,
-      category: ["Design", "Movie"],
-      readTime: "6 mins",
-      author: "Michael",
-      date: "28 Nov 2022",
-    },
-    {
-      id: 3,
-      category: ["Technology", "Business"],
-      readTime: "5 mins",
-      author: "Sarah",
-      date: "30 Nov 2022",
-    },
-  ];
-
   return (
     <section className="relative">
       <div className="container px-4 mx-auto">
@@ -39,14 +16,14 @@ const FeaturedPosts = () => {
         </div>
 
         <div className="grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-3">
-          {posts.map((post) => (
+          {posts.slice(0, 3).map((post, i) => (
             <article
-              key={post.id}
+              key={`post ${i}`}
               className="overflow-hidden transition-all border-2 border-[#dae3ff] p-4 sm:p-5 duration-300 bg-prussian-blue rounded-2xl hover:transform hover:-translate-y-2"
             >
               <div className="relative h-60 sm:h-72 md:h-80">
                 <Image
-                  src={`/assets/images/featured-${post.id}.png`}
+                  src={post.image}
                   fill
                   alt="Featured post"
                   className="object-cover rounded-lg"
@@ -57,7 +34,7 @@ const FeaturedPosts = () => {
               <div className="p-4 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {post.category.map((cat) => (
+                    {post.tags.map((cat) => (
                       <span
                         key={cat}
                         className="px-2 py-1 text-xs rounded-full sm:text-sm bg-oxford-blue-2 text-carolina-blue"
@@ -67,15 +44,15 @@ const FeaturedPosts = () => {
                     ))}
                   </div>
                   <span className="flex items-center gap-1 text-xs sm:text-sm text-slate-gray">
-                    ⏳ {post.readTime}
+                    ⏳ {post.date}
                   </span>
                 </div>
 
                 <h3 className="mb-3 text-base font-bold sm:text-lg md:text-xl text-alice-blue">
-                  Self-observation is the first step of inner unfolding
+                  {post.title}{" "}
                 </h3>
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <Image
                     src="/assets/images/author-1.png"
                     width={36}
@@ -89,7 +66,7 @@ const FeaturedPosts = () => {
                     </p>
                     <p className="text-xs text-slate-gray">{post.date}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </article>
           ))}

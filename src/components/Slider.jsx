@@ -7,31 +7,31 @@ const topics = [
   {
     src: "/assets/images/topic-1.png",
     alt: "Sport",
-    title: "Sport",
+    title: "Цөмийн эрчим хүч",
     articles: 38,
   },
   {
     src: "/assets/images/topic-2.png",
     alt: "Travel",
-    title: "Travel",
+    title: "Цацрагийн хамгаалалт",
     articles: 63,
   },
   {
     src: "/assets/images/topic-3.png",
     alt: "Design",
-    title: "Design",
+    title: "Цөмийн анагаах ухаан",
     articles: 78,
   },
   {
     src: "/assets/images/topic-4.png",
     alt: "Movie",
-    title: "Movie",
+    title: "Цөмийн судалгаа",
     articles: 125,
   },
   {
     src: "/assets/images/topic-5.png",
     alt: "Lifestyle",
-    title: "Lifestyle",
+    title: "Цөмийн аюулгүй байдал",
     articles: 78,
   },
 ];
@@ -91,7 +91,7 @@ export default function TopicsSlider() {
                       />
                       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
                     </div>
-                    <div className="absolute bottom-4 left-4">
+                    <div className="absolute bottom-4 left-4 text-start">
                       <span className="text-lg font-bold text-blue-300 group-hover:text-white">
                         {topic.title}
                       </span>

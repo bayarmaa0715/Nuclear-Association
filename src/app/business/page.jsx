@@ -1,14 +1,17 @@
+"use client";
 import React from "react";
+import { Advice } from "@/components/Business/Advice";
+import ProfessionalServices from "@/components/Business/ProfessionalServices";
 
 const Business = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        Үйл ажиллагаа
-        <p>Мэргэжлийн зөвлөгөө"</p>
-        <p>Мэргэжлийн үйлчилгээ"</p>
-        <p>Сургалтууд"</p>
-      </div>
+    <div className="h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory ">
+      <section id="advice" className="snap-start">
+        <Advice />
+      </section>
+      <section id="service" className="snap-start">
+        <ProfessionalServices />
+      </section>
     </div>
   );
 };
